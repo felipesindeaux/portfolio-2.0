@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue&family=Inter&display=swap");
 @import "tailwindcss";
 @import "./about.css";
+@import "./skills.css";
 
 
 body h1,
@@ -18,8 +19,9 @@ body h1 {
 }
 
 @theme {
-  --primary: #151515;
-  --secondary: #131312;
+  --primary: #121214;
+  --secondary: #868E96;
+  --background-primary: #0A0A0B;
   --text-primary: white;
   --text-secondary: #CCCCCC;
   --cards-background: #171717;
