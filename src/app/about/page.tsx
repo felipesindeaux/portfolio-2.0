@@ -14,7 +14,7 @@ export default function About() {
           </FadeIn>
 
           <FadeIn delay={0.5}>
-            <h1 className="about-title mb-4">conhecer minha <span className="text-orange-400">trajetória.</span></h1>
+            <h1 className="about-title mb-4">conhecer minha <span className="text-orange-400">trajetória</span></h1>
           </FadeIn>
           <FadeIn delay={0.8}>
             <div className="about-text-container flex flex-col items-center justify-between text-justify">

@@ -36,7 +36,10 @@ export default function Skills() {
 
   return (
     <div className="flex flex-col items-center justify-around w-[100vw] h-screen bg-(--primary)">
-      <h1>Habilidades</h1>
+      <div className='flex flex-col items-center'>
+        <h1>Habilidades</h1>
+        <p className='text-center m-0 text-(--secondary)'>Algumas das tecnologias com as quais já trabalhei ou estudei</p>
+      </div>
       <div className="flex h-[75%] w-[92%] md:w-[100%] justify-center 2xl:w-[70%]">
         <div className="flex flex-col h-[100%]">
           {tabsIcons.map(tab => (
