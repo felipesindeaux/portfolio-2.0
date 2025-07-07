@@ -56,7 +56,7 @@ export default function Skills() {
                 alt={`${tab.id} icon`}
                 width={180}
                 height={180}
-                className='w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:w-[170px] lg:h-[170px]'
+                className='w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] lg:w-[150px] lg:h-[150px] xl:w-[170px] xl:h-[170px]'
               />
               <h3 className='font-bold text-[20px]'>{tab.label}</h3>
             </button>
