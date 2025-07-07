@@ -13,7 +13,7 @@ export default function ScrollIndicator() {
         ease: 'easeInOut',
       }}
     >
-      <p className="scroll-text mb-1">Pise fundo!</p>
+      <p className="cursor-default text-[19px] tracking-[2px] mt-[5px] font-(family-name:--scroll-indicator-font) opacity-[0.6] mb-1">Pise fundo!</p>
 
       <svg
         width="50"

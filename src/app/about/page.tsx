@@ -5,9 +5,9 @@ import ScrollIndicator from '@/components/ScrollIndicator';
 export default function About() {
 
   return (
-    <div className="section-container relative h-screen overflow-hidden">
+    <div className="flex flex-col items-center justify-around w-[100vw] relative h-screen overflow-hidden">
       <CarBackground />
-      <div className="radial-gradient section-container">
+      <div className="radial-gradient flex flex-col items-center justify-around w-[100vw]">
         <div className="about-container flex flex-col items-center">
           <FadeIn delay={0.2}>
             <h1 className="about-title">Ajuste os cintos e prepare-se para</h1>

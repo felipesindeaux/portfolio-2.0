@@ -35,7 +35,7 @@ export default function Skills() {
   };
 
   return (
-    <div className="section-container h-screen bg-(--primary)">
+    <div className="flex flex-col items-center justify-around w-[100vw] h-screen bg-(--primary)">
       <h1>Habilidades</h1>
       <div className="flex h-[75%] w-[92%] md:w-[100%] justify-center 2xl:w-[70%]">
         <div className="flex flex-col h-[100%]">

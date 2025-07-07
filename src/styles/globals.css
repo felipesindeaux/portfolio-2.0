@@ -28,6 +28,7 @@ body h1 {
   --cards-outline: #373636;
   --title-font: "Epilogue", "sans-serif";
   --text-font: "Inter", "sans-serif";
+  --scroll-indicator-font: "Orbitron", "sans-serif";
 }
 
 body {
