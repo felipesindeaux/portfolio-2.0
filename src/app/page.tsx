@@ -1,4 +1,5 @@
 import About from "./about/page";
+import Contact from "./contact/page";
 import RoadMap from "./roadmap/page";
 import Skills from "./skills/page";
 
@@ -9,7 +10,7 @@ export default function Home() {
         <About />
         <Skills />
         <RoadMap />
-        <div className="h-[100vh]"/>
+        <Contact />
       </main>
     </div>
   );

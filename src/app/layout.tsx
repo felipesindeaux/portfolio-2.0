@@ -8,7 +8,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
-        <link rel="icon" href="/icon.ico" />
+        <link rel="icon" href="/icon.png" />
         <title>Felipe Sindeaux | Portfolio</title>
         <meta
           name="description"
