@@ -127,14 +127,21 @@ export default function RoadMap() {
 
               <div ref={lineRef} className="relative w-[85%] md:w-[90%] h-1 bg-gray-300 rounded-full">
                 {TIMELINE.map((item, index) => (
-                  <div
+                  <button
                     key={index}
-                    className="absolute top-3 transform -translate-x-1/2 flex flex-col items-center"
+                    onClick={() => {
+                      setActiveMilestone(index);
+                      if (containerRef.current) {
+                        const progress = index / (TIMELINE.length - 1);
+                        setScrollProgress(containerRef.current, progress);
+                      }
+                    }}
+                    className="absolute top-3 transform -translate-x-1/2 flex flex-col items-center cursor-pointer"
                     style={{ left: `${(index / (TIMELINE.length - 1)) * 100}%` }}
                   >
                     <span className="text-xs font-bold mb-2 text-white whitespace-nowrap">{item.year}</span>
                     <div className={`w-1 h-4 rounded-xs ${index === activeMilestone ? 'bg-orange-500  animate-ping ' : 'bg-gray-300'}`} />
-                  </div>
+                  </button>
                 ))}
 
                 <motion.img
