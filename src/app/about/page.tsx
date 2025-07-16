@@ -5,7 +5,7 @@ import ScrollIndicator from '@/components/ScrollIndicator';
 export default function About() {
 
   return (
-    <div className="flex flex-col items-center justify-around w-[100vw] relative h-screen overflow-hidden">
+    <section className="flex flex-col items-center justify-around w-[100vw] relative h-screen overflow-hidden">
       <CarBackground />
       <div className="radial-gradient flex flex-col items-center justify-around w-[100vw]">
         <div className="about-container flex flex-col items-center">
@@ -32,6 +32,6 @@ export default function About() {
         </div>
         <ScrollIndicator />
       </div>
-    </div >
+    </section >
   );
 };

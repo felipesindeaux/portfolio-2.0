@@ -3,7 +3,13 @@ import { BackEndSkills } from '@/components/BackEndSkills';
 import { FrontEndSkills } from '@/components/FrontEndSkills';
 import { OthersSkills } from '@/components/OthersSkills';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+
+const TABSCONTENT = {
+  front: FrontEndSkills,
+  back: BackEndSkills,
+  others: OthersSkills
+}
 
 
 export default function Skills() {
@@ -18,13 +24,7 @@ export default function Skills() {
     { id: "others", icon: "/images/suspension.png", label: 'Outras' },
   ]
 
-  const tabsContent = {
-    front: FrontEndSkills,
-    back: BackEndSkills,
-    others: OthersSkills
-  }
-
-  const SkillsToRender = tabsContent[activeTab];
+  const SkillsToRender = useMemo(() => TABSCONTENT[activeTab], [activeTab]);
 
   const renderSkillsContent = () => {
     return (
@@ -35,7 +35,7 @@ export default function Skills() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-around w-[100vw] h-screen bg-(--primary)">
+    <section className="flex flex-col items-center justify-around w-[100vw] h-screen bg-(--primary)">
       <div className='flex flex-col items-center'>
         <h1>Habilidades</h1>
         <p className='text-center m-0 text-(--secondary)'>Algumas das tecnologias com as quais já trabalhei ou estudei</p>
@@ -46,7 +46,7 @@ export default function Skills() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`skill-section-tab select-none w-[120px] sm:w-[160px] md:w-[200px] lg:w-[228px] transition flex flex-col items-center justify-center ${activeTab === tab.id
+              className={`skill-section-tab select-none h-[100%] w-[120px] sm:w-[160px] md:w-[200px] lg:w-[228px] transition flex flex-col items-center justify-center ${activeTab === tab.id
                 ? "bg-(--background-primary)"
                 : "bg-[#1d1d1d] opacity-50 hover:opacity-100 cursor-pointer"
                 }`}
@@ -63,10 +63,10 @@ export default function Skills() {
           ))}
         </div>
         <div className="skills-tab-container overflow-y-auto p-10 sm:p-0 items-center justify-evenly flex flex-col items-center h-[100%] w-[70%] bg-(--background-primary)">
-            {renderSkillsContent()}
+          {renderSkillsContent()}
         </div>
       </div>
 
-    </div >
+    </section >
   );
 };

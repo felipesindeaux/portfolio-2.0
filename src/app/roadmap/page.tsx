@@ -100,7 +100,7 @@ export default function RoadMap() {
   }, [scrollYProgress]);
 
   return (
-    <div className="relative w-full h-screen bg-(--background-primary) overflow-hidden">
+    <section className="relative w-full h-screen bg-(--background-primary) overflow-hidden">
       <div
         ref={containerRef}
         id='roadmap-scroll'
@@ -148,6 +148,6 @@ export default function RoadMap() {
           </div >
         </div>
       </div>
-    </div >
+    </section >
   );
 };
