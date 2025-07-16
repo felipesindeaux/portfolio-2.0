@@ -47,7 +47,7 @@ export default function Skills() {
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`skill-section-tab select-none w-[120px] sm:w-[160px] md:w-[200px] lg:w-[228px] transition flex flex-col items-center justify-center ${activeTab === tab.id
-                ? "bg-[var(--background-primary)]"
+                ? "bg-(--background-primary)"
                 : "bg-[#1d1d1d] opacity-50 hover:opacity-100 cursor-pointer"
                 }`}
             >
