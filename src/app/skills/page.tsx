@@ -3,7 +3,7 @@ import { BackEndSkills } from "@/components/BackEndSkills";
 import { FrontEndSkills } from "@/components/FrontEndSkills";
 import { OthersSkills } from "@/components/OthersSkills";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 const TABSCONTENT = {
   front: FrontEndSkills,
@@ -15,6 +15,7 @@ export default function Skills() {
   type TabKey = "front" | "back" | "others";
 
   const [activeTab, setActiveTab] = useState<TabKey>("front");
+  const skillsContainerRef = useRef<HTMLDivElement>(null);
 
   const tabsIcons: { id: TabKey; icon: string; label: string }[] = [
     { id: "front", icon: "/images/wheel.png", label: "Front-End" },
@@ -32,6 +33,13 @@ export default function Skills() {
     );
   };
 
+  const handleTabClick = (id: TabKey) => {
+    setActiveTab(id);
+    if (skillsContainerRef.current) {
+      skillsContainerRef.current.scrollTop = 0;
+    }
+  };
+
   return (
     <section className="flex flex-col items-center justify-around w-[100vw] h-screen bg-(--primary)">
       <div className="flex flex-col items-center">
@@ -45,7 +53,7 @@ export default function Skills() {
           {tabsIcons.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => handleTabClick(tab.id)}
               className={`skill-section-tab select-none h-[100%] w-[120px] sm:w-[160px] md:w-[200px] xl2:w-[228px] transition flex flex-col items-center justify-center ${
                 activeTab === tab.id
                   ? "bg-(--background-primary)"
@@ -63,7 +71,10 @@ export default function Skills() {
             </button>
           ))}
         </div>
-        <div className="skills-tab-container overflow-y-auto p-10 sm:p-0 items-center justify-evenly flex flex-col items-center h-[100%] w-[70%] bg-(--background-primary)">
+        <div
+          ref={skillsContainerRef}
+          className="skills-tab-container overflow-y-auto p-10 sm:p-0 items-center justify-evenly flex flex-col items-center h-[100%] w-[70%] bg-(--background-primary)"
+        >
           {renderSkillsContent()}
         </div>
       </div>
