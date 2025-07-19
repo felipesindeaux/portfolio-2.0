@@ -46,7 +46,7 @@ export default function Skills() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`skill-section-tab select-none h-[100%] w-[120px] sm:w-[160px] md:w-[200px] lg:w-[228px] transition flex flex-col items-center justify-center [@media(max-height:800px)]:w-[200px] ${
+              className={`skill-section-tab select-none h-[100%] w-[120px] sm:w-[160px] md:w-[200px] xl2:w-[228px] transition flex flex-col items-center justify-center ${
                 activeTab === tab.id
                   ? "bg-(--background-primary)"
                   : "bg-[#1d1d1d] opacity-50 hover:opacity-100 cursor-pointer"
@@ -57,7 +57,7 @@ export default function Skills() {
                 alt={`${tab.id} icon`}
                 width={180}
                 height={180}
-                className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] xl:w-[170px] xl:h-[170px] [@media(max-height:800px)]:h-[140px] [@media(max-height:800px)]:w-[140px]"
+                className="w-[120px] h-[120px] xl:w-[140px] xl:h-[140px] xl2:w-[170px] xl2:h-[170px]"
               />
               <h3 className="font-bold text-[20px]">{tab.label}</h3>
             </button>
