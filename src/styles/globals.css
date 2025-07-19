@@ -2,7 +2,7 @@
 @import "tailwindcss";
 @import "./about.css";
 @import "./skills.css";
-
+@import "./contact.css";
 
 body h1,
 h2,
@@ -20,10 +20,10 @@ body h1 {
 
 @theme {
   --primary: #121214;
-  --secondary: #868E96;
-  --background-primary: #0A0A0B;
+  --secondary: #868e96;
+  --background-primary: #0a0a0b;
   --text-primary: white;
-  --text-secondary: #CCCCCC;
+  --text-secondary: #cccccc;
   --cards-background: #171717;
   --cards-outline: #373636;
   --title-font: "Epilogue", "sans-serif";
@@ -33,51 +33,4 @@ body h1 {
 
 body {
   color: var(--text-primary);
-}
-
-.btn,
-.input {
-  height: 52px;
-}
-
-.input {
-  width: 100%;
-  padding-left: 1.5rem;
-  border-radius: 0.5rem;
-}
-
-.input,
-.textarea {
-  background: transparent;
-  outline: none;
-  border: 1px solid white;
-}
-
-input:-webkit-autofill {
-  background-color: transparent !important;
-  -webkit-text-fill-color: white !important;
-  box-shadow: 0 0 0px 1000px var(--primary) inset !important;
-  border-color: white !important;
-  border-width: 1px !important;
-  border-style: solid !important;
-}
-
-.input:focus,
-.textarea:focus {
-  border-color: white;
-  box-shadow: 0 0 0 1px white;
-}
-
-.input::placeholder,
-.textarea::placeholder {
-  color: rgba(255, 255, 255, 0.3);
-  font-weight: 300;
-}
-
-.textarea {
-  width: 100%;
-  height: 180px;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  resize: none;
 }

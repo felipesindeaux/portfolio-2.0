@@ -31,10 +31,7 @@ export default function RootLayout({
           content="https://avatars.githubusercontent.com/u/89540255?v=4"
         />
       </head>
-      <body
-        className="antialiased"
-        suppressHydrationWarning
-      >
+      <body className="antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>

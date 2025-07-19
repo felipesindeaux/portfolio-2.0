@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function ScrollIndicator() {
   return (
@@ -10,10 +10,12 @@ export default function ScrollIndicator() {
       transition={{
         duration: 2,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       }}
     >
-      <p className="cursor-default text-[19px] tracking-[2px] mt-[5px] font-(family-name:--scroll-indicator-font) opacity-[0.6] mb-1">Pise fundo!</p>
+      <p className="cursor-default text-[19px] tracking-[2px] mt-[5px] font-(family-name:--scroll-indicator-font) opacity-[0.6] mb-1">
+        Pise fundo!
+      </p>
 
       <svg
         width="50"

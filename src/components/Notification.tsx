@@ -1,5 +1,5 @@
-import { FC, useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { FC, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface NotificationProps {
   message: string;
@@ -67,32 +67,32 @@ const Notification: FC<NotificationProps> = ({ message, color, onClose }) => {
   };
 
   const colorClasses = {
-    green: 'bg-green-600',
-    red: 'bg-red-600',
-    yellow: 'bg-yellow-600',
-    blue: 'bg-blue-600',
+    green: "bg-green-600",
+    red: "bg-red-600",
+    yellow: "bg-yellow-600",
+    blue: "bg-blue-600",
   };
 
   const progressColorClasses = {
-    green: 'bg-green-400',
-    red: 'bg-red-400',
-    yellow: 'bg-yellow-400',
-    blue: 'bg-blue-400',
+    green: "bg-green-400",
+    red: "bg-red-400",
+    yellow: "bg-yellow-400",
+    blue: "bg-blue-400",
   };
 
   const iconByColor = {
-    green: '✓',
-    red: '✕',
-    yellow: '⚠',
-    blue: 'ℹ',
+    green: "✓",
+    red: "✕",
+    yellow: "⚠",
+    blue: "ℹ",
   };
 
   const bgColorClass =
-    colorClasses[color as keyof typeof colorClasses] || 'bg-gray-600';
+    colorClasses[color as keyof typeof colorClasses] || "bg-gray-600";
   const progressColorClass =
     progressColorClasses[color as keyof typeof progressColorClasses] ||
-    'bg-gray-400';
-  const icon = iconByColor[color as keyof typeof iconByColor] || 'ℹ';
+    "bg-gray-400";
+  const icon = iconByColor[color as keyof typeof iconByColor] || "ℹ";
 
   return (
     <AnimatePresence>
@@ -122,9 +122,9 @@ const Notification: FC<NotificationProps> = ({ message, color, onClose }) => {
 
             <motion.div
               className={`h-1 ${progressColorClass}`}
-              initial={{ width: '100%' }}
+              initial={{ width: "100%" }}
               animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.1, ease: 'linear' }}
+              transition={{ duration: 0.1, ease: "linear" }}
             />
           </motion.div>
         </div>

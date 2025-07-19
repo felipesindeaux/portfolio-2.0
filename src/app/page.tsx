@@ -5,7 +5,10 @@ import Skills from "./skills/page";
 
 export default function Home() {
   return (
-    <div id="page-container" className="overflow-y-scroll h-screen overflow-x-hidden font-[family-name:var(--text-font)]">
+    <div
+      id="page-container"
+      className="overflow-y-scroll h-screen overflow-x-hidden font-[family-name:var(--text-font)]"
+    >
       <main>
         <About />
         <Skills />

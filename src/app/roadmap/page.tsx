@@ -80,7 +80,7 @@ export default function RoadMap() {
     if (!isAutoPlaying) return;
 
     const timer = setInterval(() => {
-      setActiveMilestone((current) => 
+      setActiveMilestone((current) =>
         current === TIMELINE.length - 1 ? 0 : current + 1
       );
     }, 12000);
@@ -108,7 +108,10 @@ export default function RoadMap() {
   }, [sectionRef]);
 
   return (
-    <section ref={sectionRef} className="w-full h-screen flex flex-col items-center justify-around py-10 bg-(--background-primary)">
+    <section
+      ref={sectionRef}
+      className="w-full h-screen flex flex-col items-center justify-around py-10 bg-(--background-primary)"
+    >
       <h1>Trajetória</h1>
       <div className="w-full h-full flex flex-col items-center justify-around">
         <motion.div
