@@ -22,15 +22,19 @@
   background-image: url(/images/car.png);
 }
 
-.about-container {
-  width: 865px;
+@media (max-width: 1280px) {
+  .car-bg {
+    background-image: url(/images/car_1.png);
+    background-position: center;
+  }
 }
 
-.about-text-container {
-  height: 175px;
-}
+@media (max-width: 1024px) {
+  .car-bg {
+    background-size: cover;
+    background-image: url(/images/car_2.png);
+  }
 
-@media (max-width: 1320px) {
   .radial-gradient {
     background: linear-gradient(
       to bottom,
@@ -41,90 +45,13 @@
   }
 }
 
-@media (max-width: 1245px) {
-  .car-bg {
-    background-image: url(/images/car_1.png);
-    background-position: center;
-  }
-}
-
-@media (max-width: 1000px) {
-  .about-title {
-    font-size: 36px;
-  }
-
-  .car-bg {
-    background-size: cover;
-    background-image: url(/images/car_2.png);
-  }
-
-  .radial-gradient {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.43),
-      rgba(0, 0, 0, 0)
-    );
-  }
-
-  .about-container {
-    width: auto;
-  }
-
-  .about-text {
-    font-size: 16px;
-  }
-
-  .about-text-container {
-    width: 415px;
-    height: 320px;
-  }
-}
-
-@media (max-width: 680px) {
+@media (max-width: 640px) {
   .car-bg {
     background-image: url(/images/car_3.png);
     background-size: cover;
   }
 
-  .about-container {
-    width: 413px;
-  }
-
   .radial-gradient {
     background: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-container {
-    width: 317px;
-  }
-
-  .about-text-container {
-    width: 317px;
-    height: 300px;
-  }
-
-  .about-text {
-    font-size: 14px;
-  }
-
-  .about-title {
-    font-size: 33px;
-  }
-}
-
-@media (max-height: 750px) and (max-width: 480px) {
-  .about-title {
-    font-size: 25px;
-  }
-
-  .about-text-container {
-    height: 258px;
-  }
-
-  .about-text {
-    font-size: 13px;
   }
 }
