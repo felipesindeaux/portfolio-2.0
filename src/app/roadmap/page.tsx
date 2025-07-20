@@ -112,7 +112,7 @@ export default function RoadMap() {
       ref={sectionRef}
       className="w-full h-screen flex flex-col items-center justify-around py-10 bg-(--background-primary)"
     >
-      <h1>Trajetória</h1>
+      <h1 className="text-[44px]">Trajetória</h1>
       <div className="w-full h-full flex flex-col items-center justify-around">
         <motion.div
           initial={{ opacity: 0 }}
@@ -143,9 +143,9 @@ export default function RoadMap() {
                 left: `${(index / (TIMELINE.length - 1)) * 100}%`,
               }}
             >
-              <span className="text-xs font-bold mb-2 text-white whitespace-nowrap">
+              {/* <span className="text-xs font-bold mb-2 text-white whitespace-nowrap">
                 {item.year}
-              </span>
+              </span> */}
               <div
                 className={`w-1 h-4 rounded-xs ${
                   index === activeMilestone
