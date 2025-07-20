@@ -143,9 +143,9 @@ export default function RoadMap() {
                 left: `${(index / (TIMELINE.length - 1)) * 100}%`,
               }}
             >
-              {/* <span className="text-xs font-bold mb-2 text-white whitespace-nowrap">
+              <span className="text-xs font-bold mb-2 text-white whitespace-nowrap">
                 {item.year}
-              </span> */}
+              </span>
               <div
                 className={`w-1 h-4 rounded-xs ${
                   index === activeMilestone
