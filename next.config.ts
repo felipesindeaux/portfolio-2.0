@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
     EMAIL_TEMPLATE_ID: process.env.EMAIL_TEMPLATE_ID,
     EMAIL_PUBLIC_KEY: process.env.EMAIL_PUBLIC_KEY,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
