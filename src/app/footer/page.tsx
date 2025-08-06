@@ -25,7 +25,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/felipesindeaux/"
             target="_blank"
             rel="noreferrer"
-            className="group w-12 h-12 bg-[#0E76A8] rounded-full flex items-center justify-center hover:bg-transparent hover:border-2 hover:border-[#0E76A8] transition-all duration-300"
+            className="group w-12 h-12 bg-[#0E76A8] rounded-full flex items-center justify-center hover:bg-transparent border-2 border-transparent hover:border-[#0E76A8] transition-all duration-300"
           >
             <FaLinkedinIn className="text-white w-5 h-5 group-hover:text-[#0E76A8] transition-colors duration-300" />
           </a>
@@ -33,7 +33,7 @@ export default function Footer() {
             href="https://github.com/felipesindeaux"
             target="_blank"
             rel="noreferrer"
-            className="group w-12 h-12 bg-[white] rounded-full flex items-center justify-center hover:bg-transparent hover:border-2 hover:border-white transition-all duration-300"
+            className="group w-12 h-12 bg-[white] rounded-full flex items-center justify-center hover:bg-transparent border-2 border-transparent hover:border-white transition-all duration-300"
           >
             <FaGithub className="text-black w-5 h-5 group-hover:text-white transition-colors duration-300" />
           </a>
