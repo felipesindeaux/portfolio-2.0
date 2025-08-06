@@ -1,5 +1,6 @@
 "use client";
 import { BackEndSkills } from "@/components/BackEndSkills";
+import { FadeInOnScreen } from "@/components/FadeInOnScreen";
 import { FrontEndSkills } from "@/components/FrontEndSkills";
 import { OthersSkills } from "@/components/OthersSkills";
 import Image from "next/image";
@@ -42,13 +43,13 @@ export default function Skills() {
 
   return (
     <section className="flex flex-col items-center justify-around w-[100vw] h-screen bg-(--primary)">
-      <div className="flex flex-col items-center">
+      <FadeInOnScreen delay={0.2} className="flex flex-col items-center">
         <h1 className="text-[44px]">Habilidades</h1>
         <p className="text-center m-0 text-(--secondary)">
           Algumas das tecnologias com as quais já trabalhei ou estudei
         </p>
-      </div>
-      <div className="flex h-[75%] w-[92%] md:w-[100%] justify-center 2xl:w-[70%]">
+      </FadeInOnScreen>
+      <FadeInOnScreen delay={0.4} className="flex h-[75%] w-[92%] md:w-[100%] justify-center 2xl:w-[70%]">
         <div className="flex flex-col h-[100%]">
           {tabsIcons.map((tab) => (
             <button
@@ -77,7 +78,7 @@ export default function Skills() {
         >
           {renderSkillsContent()}
         </div>
-      </div>
+      </FadeInOnScreen>
     </section>
   );
 }

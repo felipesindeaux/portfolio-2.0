@@ -41,7 +41,7 @@ export default function Footer() {
             href="https://drive.google.com/file/d/1I9-hEOvJg9W82ivoGRpgyEqxFBIcNqNW/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
-            className="bg-orange-400 font-semi-bold rounded-full px-5 py-3 text-[16px] hover:text-white transition-all duration-300"
+            className="bg-orange-400 text-(--background-primary) font-semi-bold rounded-full px-5 py-3 text-[16px] border-2 border-transparent hover:bg-transparent hover:border-orange-400 hover:text-white transition-all duration-300"
           >
             Currículo
           </a>

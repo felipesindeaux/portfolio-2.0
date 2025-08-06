@@ -30,7 +30,7 @@ export default function About() {
               <p>
                 Minha paixão por tecnologia anda lado a lado com meu entusiasmo
                 por carros. Aqui, cada linha de código carrega um pouco de quem
-                eu sou — direto, criativo e sempre pronto para acelerar rumo a
+                eu sou, criativo e sempre pronto para acelerar rumo a
                 novos desafios.
               </p>
               <p className="w-full">
