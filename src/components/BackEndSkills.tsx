@@ -3,7 +3,7 @@ import {
   SiPython,
   SiServerless,
   SiAdonisjs,
-  SiDjango,
+  SiNestjs
 } from "react-icons/si";
 import { DiRubyRough } from "react-icons/di";
 import { SlideIn } from "./SlideIn";
@@ -27,8 +27,8 @@ export function BackEndSkills() {
       icon: SiPython,
     },
     {
-      label: "Django",
-      icon: SiDjango,
+      label: "Nest",
+      icon: SiNestjs,
     },
     {
       label: "Ruby",
