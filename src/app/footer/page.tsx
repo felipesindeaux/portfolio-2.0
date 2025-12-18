@@ -38,7 +38,7 @@ export default function Footer() {
             <FaGithub className="text-black w-5 h-5 group-hover:text-white transition-colors duration-300" />
           </a>
           <a
-            href="https://drive.google.com/file/d/12pkPSd6lw7kP2Yrjw8XUIlTC-Dl81_4A/view?usp=sharing"
+            href="https://drive.google.com/file/d/1gDUQQOAfmGoZh5JJ31bOJ2oGUWHhQq4y/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             className="bg-orange-400 text-(--background-primary) font-semi-bold rounded-full px-5 py-3 text-[16px] border-2 border-transparent hover:bg-transparent hover:border-orange-400 hover:text-white transition-all duration-300"
