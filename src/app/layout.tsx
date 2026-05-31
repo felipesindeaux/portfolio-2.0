@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Suspense } from 'react';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
@@ -34,7 +34,6 @@ export async function generateMetadata(): Promise<Metadata> {
     ],
     authors: [{ name: 'Felipe Sindeaux' }],
     icons: { icon: '/icon.png' },
-    themeColor: '#121214',
     openGraph: {
       title: 'Felipe Sindeaux',
       description,
@@ -42,6 +41,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
+
+export const viewport: Viewport = {
+  themeColor: '#121214',
+};
 
 export default async function RootLayout({
   children,

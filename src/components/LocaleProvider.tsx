@@ -26,7 +26,11 @@ export function LocaleProvider({ initialLocale, children }: LocaleProviderProps)
   }, [locale]);
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages[locale]}>
+    <NextIntlClientProvider
+      locale={locale}
+      messages={messages[locale]}
+      timeZone="America/Sao_Paulo"
+    >
       {children}
     </NextIntlClientProvider>
   );
