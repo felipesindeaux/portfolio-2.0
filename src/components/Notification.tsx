@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -12,6 +12,9 @@ const Notification: FC<NotificationProps> = ({ message, color, onClose }) => {
   const t = useTranslations("notification");
   const [progress, setProgress] = useState(100);
   const TIMEOUT_DURATION = 3000;
+
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
 
   useEffect(() => {
     if (!message) return;
@@ -34,7 +37,7 @@ const Notification: FC<NotificationProps> = ({ message, color, onClose }) => {
     animationFrameId = requestAnimationFrame(updateProgress);
 
     const timeout = setTimeout(() => {
-      onClose();
+      onCloseRef.current();
     }, TIMEOUT_DURATION);
 
     return () => {
