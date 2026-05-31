@@ -22,7 +22,7 @@ export default function About() {
           <FadeIn className="flex items-center justify-center" delay={0.8}>
             <div className="flex flex-col gap-4 items-center justify-between text-justify max-w-[600px] xl:max-w-[900px] w-[90%] text-[13px] sm:text-[16px]">
               <p>
-                Sou Felipe, tenho 24 anos e sou Desenvolvedor Full Stack com
+                Sou Felipe, tenho 25 anos e sou Desenvolvedor Full Stack com
                 mais de 3 anos de experiência na estrada do desenvolvimento.
                 Assim como um carro bem ajustado, busco entregar performance,
                 estilo e precisão em cada projeto que desenvolvo.
