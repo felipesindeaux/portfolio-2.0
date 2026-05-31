@@ -55,7 +55,7 @@ const Notification: FC<NotificationProps> = ({ message, color, onClose }) => {
       scale: 1,
       transition: {
         duration: 0.2,
-        ease: [0.25, 0.25, 0.25, 0.75],
+        ease: [0.25, 0.25, 0.25, 0.75] as const,
       },
     },
     exit: {
@@ -63,7 +63,7 @@ const Notification: FC<NotificationProps> = ({ message, color, onClose }) => {
       scale: 0.9,
       transition: {
         duration: 0.2,
-        ease: [0.25, 0.25, 0.25, 0.75],
+        ease: [0.25, 0.25, 0.25, 0.75] as const,
       },
     },
   };
