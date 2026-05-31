@@ -1,22 +1,25 @@
 import Image from 'next/image';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('footer');
+
   return (
     <footer className="bg-(--background-primary) flex justify-center items-center h-[200px]">
       <div className="flex flex-col items-center justify-evenly h-full w-full sm:flex-row md:max-w-[1000px]">
         <div className="flex items-center gap-6">
           <Image
             src={'https://avatars.githubusercontent.com/u/89540255?v=4'}
-            alt="Profile Photo"
+            alt={t('profileAlt')}
             height={60}
             width={60}
             className="rounded-full"
           />
           <div className="flex flex-col items-center justify-between h-[67px]">
-            <p className="text-white text-[24px] font-bold">Obrigado</p>
+            <p className="text-white text-[24px] font-bold">{t('thanks')}</p>
             <p className="text-(--text-secondary) text-[16px]">
-              Links importantes
+              {t('importantLinks')}
             </p>
           </div>
         </div>
@@ -43,7 +46,7 @@ export default function Footer() {
             rel="noreferrer"
             className="bg-orange-400 text-(--background-primary) font-semi-bold rounded-full px-5 py-3 text-[16px] border-2 border-transparent hover:bg-transparent hover:border-orange-400 hover:text-white transition-all duration-300"
           >
-            Currículo
+            {t('resume')}
           </a>
         </div>
       </div>

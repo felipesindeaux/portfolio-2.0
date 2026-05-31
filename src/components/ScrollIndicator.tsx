@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function ScrollIndicator() {
+  const t = useTranslations("scrollIndicator");
+
   return (
     <motion.div
       className="absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center"
@@ -14,7 +17,7 @@ export default function ScrollIndicator() {
       }}
     >
       <p className="cursor-default text-[19px] tracking-[2px] mt-[5px] font-(family-name:--scroll-indicator-font) opacity-[0.6] mb-1">
-        Pise fundo!
+        {t("text")}
       </p>
 
       <svg

@@ -1,38 +1,64 @@
-import "../styles/globals.css";
+import '../styles/globals.css';
+import type { Metadata } from 'next';
+import { getLocale, getTranslations } from 'next-intl/server';
+import { Suspense } from 'react';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { LocaleProvider } from '@/components/LocaleProvider';
+import { resolveLocale } from '@/i18n/config';
 
-export default function RootLayout({
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('metadata');
+  const title = t('title');
+  const description = t('description');
+
+  return {
+    title,
+    description,
+    keywords: [
+      'developer',
+      'freelancer',
+      'react',
+      'next',
+      'nextjs',
+      'html',
+      'css',
+      'javascript',
+      'typescript',
+      'ts',
+      'js',
+      'modern-ui',
+      'modern-ux',
+      'framer-motion',
+      '3d-website',
+      'particle-effect',
+    ],
+    authors: [{ name: 'Felipe Sindeaux' }],
+    icons: { icon: '/icon.png' },
+    themeColor: '#121214',
+    openGraph: {
+      title: 'Felipe Sindeaux',
+      description,
+      images: ['https://avatars.githubusercontent.com/u/89540255?v=4'],
+    },
+  };
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="pt-br">
-      <head>
-        <link rel="icon" href="/icon.png" />
-        <title>Felipe Sindeaux | Portfolio</title>
-        <meta
-          name="description"
-          content="Felipe Sindeaux é um desenvolvedor full stack, simples, objetivo e moderno"
-        />
-        <meta
-          name="keywords"
-          content="developer, freelancer, react, next, nextjs, html, css, javascript, typescript, ts, js, modern-ui, modern-ux, framer-motion, 3d-website, particle-effect"
-        />
-        <meta name="author" content="Felipe Sindeaux" />
-        <meta name="theme-color" content="#121214" />
+  const locale = resolveLocale(await getLocale());
 
-        <meta property="og:title" content="Felipe Sindeaux" />
-        <meta
-          property="og:description"
-          content="Felipe Sindeaux é um desenvolvedor full stack, simples, objetivo e moderno"
-        />
-        <meta
-          property="og:image"
-          content="https://avatars.githubusercontent.com/u/89540255?v=4"
-        />
-      </head>
+  return (
+    <html lang={locale}>
       <body className="antialiased" suppressHydrationWarning>
-        {children}
+        <Suspense>
+          <LocaleProvider initialLocale={locale}>
+            <LanguageSwitcher />
+            {children}
+          </LocaleProvider>
+        </Suspense>
       </body>
     </html>
   );

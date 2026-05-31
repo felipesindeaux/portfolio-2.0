@@ -3,6 +3,7 @@ import { BackEndSkills } from "@/components/BackEndSkills";
 import { FadeInOnScreen } from "@/components/FadeInOnScreen";
 import { FrontEndSkills } from "@/components/FrontEndSkills";
 import { OthersSkills } from "@/components/OthersSkills";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 
@@ -15,13 +16,14 @@ const TABSCONTENT = {
 export default function Skills() {
   type TabKey = "front" | "back" | "others";
 
+  const t = useTranslations("skills");
   const [activeTab, setActiveTab] = useState<TabKey>("front");
   const skillsContainerRef = useRef<HTMLDivElement>(null);
 
-  const tabsIcons: { id: TabKey; icon: string; label: string }[] = [
-    { id: "front", icon: "/images/wheel.png", label: "Front-End" },
-    { id: "back", icon: "/images/piston.png", label: "Back-End" },
-    { id: "others", icon: "/images/suspension.png", label: "Outras" },
+  const tabsIcons: { id: TabKey; icon: string }[] = [
+    { id: "front", icon: "/images/wheel.png" },
+    { id: "back", icon: "/images/piston.png" },
+    { id: "others", icon: "/images/suspension.png" },
   ];
 
   const SkillsToRender = useMemo(() => TABSCONTENT[activeTab], [activeTab]);
@@ -44,10 +46,8 @@ export default function Skills() {
   return (
     <section className="flex flex-col items-center justify-around w-[100vw] h-screen bg-(--primary)">
       <FadeInOnScreen delay={0.2} className="flex flex-col items-center">
-        <h1 className="text-[44px]">Habilidades</h1>
-        <p className="text-center m-0 text-(--secondary)">
-          Algumas das tecnologias com as quais já trabalhei ou estudei
-        </p>
+        <h1 className="text-[44px]">{t("title")}</h1>
+        <p className="text-center m-0 text-(--secondary)">{t("subtitle")}</p>
       </FadeInOnScreen>
       <FadeInOnScreen delay={0.4} className="flex h-[75%] w-[92%] md:w-[100%] justify-center 2xl:w-[70%]">
         <div className="flex flex-col h-[100%]">
@@ -68,7 +68,7 @@ export default function Skills() {
                 height={180}
                 className="w-[120px] h-[120px] xl:w-[140px] xl:h-[140px] xl2:w-[170px] xl2:h-[170px]"
               />
-              <h3 className="font-bold text-[20px]">{tab.label}</h3>
+              <h3 className="font-bold text-[20px]">{t(`tabs.${tab.id}`)}</h3>
             </button>
           ))}
         </div>

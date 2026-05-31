@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 interface NotificationProps {
   message: string;
@@ -8,6 +9,7 @@ interface NotificationProps {
 }
 
 const Notification: FC<NotificationProps> = ({ message, color, onClose }) => {
+  const t = useTranslations("notification");
   const [progress, setProgress] = useState(100);
   const TIMEOUT_DURATION = 3000;
 
@@ -114,7 +116,7 @@ const Notification: FC<NotificationProps> = ({ message, color, onClose }) => {
               <button
                 onClick={onClose}
                 className="flex size-5 items-center justify-center rounded-full bg-white/20 text-xs font-bold text-white transition-all hover:bg-white/30"
-                aria-label="Fechar notificação"
+                aria-label={t("close")}
               >
                 ✕
               </button>

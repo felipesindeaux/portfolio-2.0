@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "title": "Felipe Sindeaux | Portfolio",
+    "description": "Felipe Sindeaux é um desenvolvedor full stack, simples, objetivo e moderno"
+  },
+  "about": {
+    "headingLine1": "Ajuste os cintos e prepare-se para",
+    "headingLine2": "conhecer minha <highlight>trajetória</highlight>",
+    "paragraph1": "Sou Felipe, tenho 25 anos e sou Desenvolvedor Full Stack com mais de 3 anos de experiência na estrada do desenvolvimento. Assim como um carro bem ajustado, busco entregar performance, estilo e precisão em cada projeto que desenvolvo.",
+    "paragraph2": "Minha paixão por tecnologia anda lado a lado com meu entusiasmo por carros. Aqui, cada linha de código carrega um pouco de quem eu sou, criativo e sempre pronto para acelerar rumo a novos desafios.",
+    "paragraph3": "Este portfólio é a minha garagem digital. Sinta-se à vontade para explorar."
+  },
+  "scrollIndicator": {
+    "text": "Pise fundo!"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Algumas das tecnologias com as quais já trabalhei ou estudei",
+    "tabs": {
+      "front": "Front-End",
+      "back": "Back-End",
+      "others": "Outras"
+    }
+  },
+  "roadmap": {
+    "title": "Trajetória",
+    "milestones": {
+      "securityStart": {
+        "date": "Fevereiro de 2020",
+        "label": "Início do curso de Segurança da Informação",
+        "description": "Foi aqui que dei meus primeiros passos na tecnologia e tive o meu primeiro contato com programação básica. Logo nas primeiras disciplinas, como algoritmos e lógica de programação eu descobri minha paixão pela área e fui buscar outros cursos e aprofundar meu conhecimento fora da faculdade."
+      },
+      "fullstackStart": {
+        "date": "Outubro de 2021",
+        "label": "Início do curso de FullStack",
+        "description": "Após explorar conteúdos por conta própria, decidi dar um passo maior e ingressei no curso profissionalizante da Kenzie Academy. Essa experiência foi essencial para consolidar minha base e iniciar uma jornada completa no desenvolvimento FullStack."
+      },
+      "peerCoach": {
+        "date": "Novembro de 2021",
+        "label": "Início do trabalho de Peer Coach(Monitoria)",
+        "description": "Meu desempenho se destacou no curso e tive a oportunidade de atuar como Peer Coach, auxiliando novos alunos. Essa experiência me proporcionou aprimorar habilidades de comunicação, liderança e mentoria, além de reforçar meu conhecimento técnico ao ensinar."
+      },
+      "fullstackEnd": {
+        "date": "Setembro de 2022",
+        "label": "Conclusão do curso de FullStack",
+        "description": "Finalizei o curso de FullStack com sólida experiência em projetos práticos e pronto para enfrentar os desafios do mercado. A jornada consolidou meu domínio em diversas tecnologias e reforçou minha confiança para atuar profissionalmente."
+      },
+      "umodeStart": {
+        "date": "Outubro de 2022",
+        "label": "Início do trabalho de Desenvolvedor FullStack na uMode",
+        "description": "Na uMode tive minha primeira oportunidade profissional, onde eu aprendi muito e onde tive meus maiores desafios, tendo a possibilidade de trabalhar com diversas tecnologias em diversas soluções no mercado da moda."
+      },
+      "securityEnd": {
+        "date": "Maio de 2024",
+        "label": "Conclusão do curso de Segurança da Informação",
+        "description": "Concluí a graduação em Segurança da Informação, ampliando meu conhecimento em proteção de dados, redes e práticas de cibersegurança. Essa base, aliada à experiência em desenvolvimento, me tornou um profissional completo, capaz de unir performance e segurança em soluções digitais."
+      }
+    }
+  },
+  "contact": {
+    "title": "Entre em <highlight>contato</highlight>",
+    "namePlaceholder": "Nome",
+    "emailPlaceholder": "Seu email",
+    "messagePlaceholder": "Mensagem...",
+    "submit": "Enviar",
+    "success": "Email enviado com sucesso!",
+    "error": "Ops, ocorreu um erro ao enviar o email! Por favor, tente novamente"
+  },
+  "footer": {
+    "profileAlt": "Foto de perfil",
+    "thanks": "Obrigado",
+    "importantLinks": "Links importantes",
+    "resume": "Currículo"
+  },
+  "notification": {
+    "close": "Fechar notificação"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "pt": "Português",
+    "en": "Inglês"
+  }
+}

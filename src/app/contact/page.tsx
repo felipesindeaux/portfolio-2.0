@@ -5,8 +5,10 @@ import { useState } from 'react';
 import Notification from '@/components/Notification';
 import emailjs from '@emailjs/browser';
 import { FadeInOnScreen } from '@/components/FadeInOnScreen';
+import { useTranslations } from 'next-intl';
 
 const Contact = () => {
+  const t = useTranslations('contact');
   const [isLoading, setIsLoading] = useState(false);
   const [notificationInfos, setNotificationInfos] = useState({
     text: '',
@@ -35,17 +37,13 @@ const Contact = () => {
       );
 
       if (formData.status === 200) {
-        handleNotification(true, 'Email enviado com sucesso!', 'green');
+        handleNotification(true, t('success'), 'green');
         myForm.reset();
       } else {
         throw new Error(`An error ocurred => ${formData}`);
       }
     } catch (error) {
-      handleNotification(
-        true,
-        'Ops, ocorreu um erro ao enviar o email! Por favor, tente novamente',
-        'red',
-      );
+      handleNotification(true, t('error'), 'red');
       console.error(error);
     } finally {
       setIsLoading(false);
@@ -58,7 +56,11 @@ const Contact = () => {
         <div className="flex w-full max-w-[700px] flex-col">
           <FadeInOnScreen delay={0.2} className="flex flex-col items-center">
             <h2 className="mb-12 text-center text-[35px] md:text-[54px] font-bold">
-              Entre em <span className="text-orange-400">contato</span>
+              {t.rich('title', {
+                highlight: (chunks) => (
+                  <span className="text-orange-400">{chunks}</span>
+                ),
+              })}
             </h2>
           </FadeInOnScreen>
 
@@ -73,7 +75,7 @@ const Contact = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Nome"
+                  placeholder={t('namePlaceholder')}
                   className="input"
                   disabled={isLoading}
                   aria-disabled={isLoading}
@@ -83,7 +85,7 @@ const Contact = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Seu email"
+                  placeholder={t('emailPlaceholder')}
                   className="input"
                   disabled={isLoading}
                   aria-disabled={isLoading}
@@ -93,7 +95,7 @@ const Contact = () => {
               </div>
               <textarea
                 name="message"
-                placeholder="Mensagem..."
+                placeholder={t('messagePlaceholder')}
                 className="textarea"
                 disabled={isLoading}
                 aria-disabled={isLoading}
@@ -107,7 +109,7 @@ const Contact = () => {
                 disabled={isLoading}
                 aria-disabled={isLoading}
               >
-                <span>Enviar</span>
+                <span>{t('submit')}</span>
               </button>
             </form>
           </FadeInOnScreen>

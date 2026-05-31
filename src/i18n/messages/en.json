@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "title": "Felipe Sindeaux | Portfolio",
+    "description": "Felipe Sindeaux is a full stack developer, simple, objective and modern"
+  },
+  "about": {
+    "headingLine1": "Fasten your seatbelt and get ready to",
+    "headingLine2": "explore my <highlight>journey</highlight>",
+    "paragraph1": "I'm Felipe, 25 years old and a Full Stack Developer with more than 3 years of experience on the development road. Just like a well-tuned car, I aim to deliver performance, style and precision in every project I build.",
+    "paragraph2": "My passion for technology goes hand in hand with my enthusiasm for cars. Here, every line of code carries a bit of who I am, creative and always ready to accelerate toward new challenges.",
+    "paragraph3": "This portfolio is my digital garage. Feel free to explore."
+  },
+  "scrollIndicator": {
+    "text": "Floor it!"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Some of the technologies I have worked with or studied",
+    "tabs": {
+      "front": "Front-End",
+      "back": "Back-End",
+      "others": "Others"
+    }
+  },
+  "roadmap": {
+    "title": "Journey",
+    "milestones": {
+      "securityStart": {
+        "date": "February 2020",
+        "label": "Started the Information Security degree",
+        "description": "This is where I took my first steps into technology and had my first contact with basic programming. In the very first subjects, like algorithms and programming logic, I discovered my passion for the field and went looking for other courses to deepen my knowledge outside college."
+      },
+      "fullstackStart": {
+        "date": "October 2021",
+        "label": "Started the Full Stack course",
+        "description": "After exploring content on my own, I decided to take a bigger step and enrolled in the professional course at Kenzie Academy. This experience was essential to consolidate my foundation and begin a complete journey into Full Stack development."
+      },
+      "peerCoach": {
+        "date": "November 2021",
+        "label": "Started working as a Peer Coach",
+        "description": "My performance stood out in the course and I had the opportunity to work as a Peer Coach, helping new students. This experience allowed me to improve my communication, leadership and mentoring skills, while reinforcing my technical knowledge by teaching."
+      },
+      "fullstackEnd": {
+        "date": "September 2022",
+        "label": "Completed the Full Stack course",
+        "description": "I finished the Full Stack course with solid experience in hands-on projects, ready to face the challenges of the market. The journey consolidated my command of several technologies and strengthened my confidence to work professionally."
+      },
+      "umodeStart": {
+        "date": "October 2022",
+        "label": "Started working as a Full Stack Developer at uMode",
+        "description": "At uMode I had my first professional opportunity, where I learned a lot and faced my biggest challenges, having the chance to work with several technologies on many solutions in the fashion market."
+      },
+      "securityEnd": {
+        "date": "May 2024",
+        "label": "Completed the Information Security degree",
+        "description": "I completed my degree in Information Security, broadening my knowledge in data protection, networks and cybersecurity practices. This foundation, combined with my development experience, made me a well-rounded professional, able to unite performance and security in digital solutions."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in <highlight>touch</highlight>",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "Message...",
+    "submit": "Send",
+    "success": "Email sent successfully!",
+    "error": "Oops, an error occurred while sending the email! Please try again"
+  },
+  "footer": {
+    "profileAlt": "Profile photo",
+    "thanks": "Thank you",
+    "importantLinks": "Important links",
+    "resume": "Resume"
+  },
+  "notification": {
+    "close": "Close notification"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "pt": "Portuguese",
+    "en": "English"
+  }
+}
