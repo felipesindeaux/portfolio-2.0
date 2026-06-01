@@ -34,3 +34,14 @@ body h1 {
 body {
   color: var(--text-primary);
 }
+
+@keyframes trail {
+  from {
+    opacity: 1;
+    transform: translateX(6px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+}

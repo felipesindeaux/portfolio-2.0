@@ -17,6 +17,11 @@ const TIMELINE = [
   { id: 'securityEnd', year: '2024', icon: TbShieldLockFilled },
 ] as const;
 
+const shortDate = (date: string) => {
+  const parts = date.split(' ');
+  return `${parts[0].slice(0, 3)} ${parts[parts.length - 1]}`;
+};
+
 export default function RoadMap() {
   const t = useTranslations('roadmap');
   const [activeMilestone, setActiveMilestone] = useState(0);
@@ -81,61 +86,137 @@ export default function RoadMap() {
             key={activeItem.id}
             className="flex flex-col items-center text-white"
           >
-            <div className="flex flex-col max-w-[90%] md:max-w-none items-center md:flex-row">
-              <ActiveIcon className="mr-2 mb-[9px] w-[32px] h-[32px]" />
+            <div className="flex flex-col max-w-[90%] md:max-w-none items-center md:flex-row mb-3.5">
+              <ActiveIcon className="mr-2 mb-[12px] w-[32px] h-[32px]" />
               <h2 className="text-2xl font-semibold text-center">
                 {t(`milestones.${activeItem.id}.label`)}
               </h2>
             </div>
-            <span>{t(`milestones.${activeItem.id}.date`)}</span>
             <p className="text-lg mt-2 max-w-[90%] md:max-w-xl text-center text-gray-300 leading-relaxed">
               {t(`milestones.${activeItem.id}.description`)}
             </p>
           </motion.div>
         </FadeInOnScreen>
 
-        <FadeInOnScreen
-          delay={0.2}
-          className="relative w-[85%] md:w-[90%] h-1 bg-gray-300 rounded-full"
-        >
-          <div ref={carRef}>
-            {TIMELINE.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleMilestoneClick(index)}
-                className="absolute top-3 transform -translate-x-1/2 flex flex-col items-center cursor-pointer hover:scale-120"
-                style={{
-                  left: `${(index / (TIMELINE.length - 1)) * 100}%`,
-                }}
-              >
-                <span className="text-xs font-bold mb-2 text-white whitespace-nowrap">
-                  {item.year}
-                </span>
-                <div
-                  className={`w-1 h-4 rounded-xs ${
-                    index === activeMilestone
-                      ? 'bg-orange-500  animate-ping'
-                      : 'bg-gray-300'
-                  }`}
-                />
-              </button>
-            ))}
+        <FadeInOnScreen delay={0.2} className="w-[88%] mx-auto pt-[70px]">
+          <div
+            ref={carRef}
+            className="relative h-0.5 bg-(--cards-outline) rounded-full"
+          >
+            <motion.div
+              className="absolute left-0 top-0 h-full rounded-full"
+              style={{
+                background:
+                  'linear-gradient(90deg, rgba(249,115,22,.35), #f97316)',
+              }}
+              animate={{
+                width: `${(activeMilestone / (TIMELINE.length - 1)) * 100}%`,
+              }}
+              transition={{ duration: 1.1, ease: [0.34, 1.1, 0.5, 1] }}
+            />
 
-            <motion.img
-              src="/images/roadmap_car.png"
-              alt="Roadmap Car"
-              className="absolute -top-13 w-20 h-auto translate-x-[-26%] md:translate-x-[-50%]"
+            <motion.div
+              className="absolute w-[92px] pointer-events-none"
+              style={{ bottom: '100%', marginBottom: -33, zIndex: 999 }}
               initial={{ left: '-15%' }}
               animate={{
                 left: isCarInView
                   ? `${(activeMilestone / (TIMELINE.length - 1)) * 100}%`
                   : '-15%',
-                transition: {
-                  duration: isCarInView && activeMilestone === 0 ? 2 : 1,
-                  ease: 'easeInOut',
-                },
+                x: activeMilestone === 0 ? '0%' : '-100%',
               }}
-            />
+              transition={{
+                duration:
+                  isCarInView && activeMilestone === 0 ? 1.8 : 1.15,
+                ease: [0.34, 1.3, 0.5, 1],
+              }}
+            >
+              <div className="relative w-full">
+                <div
+                  key={activeMilestone}
+                  className="absolute right-[78%] top-[46%] flex flex-col items-end gap-[5px]"
+                >
+                  {[34, 24, 16].map((w, i) => (
+                    <span
+                      key={i}
+                      className="block h-0.5 rounded-[2px]"
+                      style={{
+                        width: w,
+                        background:
+                          'linear-gradient(90deg, transparent, #f97316)',
+                        animation: `trail .6s ${i * 0.08}s ease-out`,
+                      }}
+                    />
+                  ))}
+                </div>
+
+                <motion.img
+                  src="/images/roadmap_car.png"
+                  alt="Roadmap Car"
+                  className="block w-full h-auto"
+                  style={{
+                    filter: 'drop-shadow(0 6px 6px rgba(0,0,0,.55))',
+                  }}
+                />
+
+                <div
+                  className="absolute left-1/2 -translate-x-1/2 w-[74%] h-[7px] rounded-[50%]"
+                  style={{
+                    bottom: -7,
+                    background:
+                      'radial-gradient(ellipse, rgba(0,0,0,.6), transparent 72%)',
+                  }}
+                />
+              </div>
+            </motion.div>
+
+            {TIMELINE.map((item, index) => {
+              const on = index === activeMilestone;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleMilestoneClick(index)}
+                  title={item.year}
+                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 p-1.5 cursor-pointer"
+                  style={{ left: `${(index / (TIMELINE.length - 1)) * 100}%` }}
+                >
+                  <span
+                    className="block rounded-full transition-all duration-[250ms]"
+                    style={{
+                      width: on ? 14 : 10,
+                      height: on ? 14 : 10,
+                      background: on ? '#f97316' : 'var(--background-primary)',
+                      border: `2px solid ${on ? '#f97316' : 'var(--secondary)'}`,
+                      boxShadow: on ? '0 0 0 5px rgba(249,115,22,.18)' : 'none',
+                    }}
+                  />
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="relative h-6 mt-4">
+            {TIMELINE.map((item, index) => {
+              const on = index === activeMilestone;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleMilestoneClick(index)}
+                  className="absolute -translate-x-1/2 px-1.5 py-0.5 cursor-pointer"
+                  style={{ left: `${(index / (TIMELINE.length - 1)) * 100}%` }}
+                >
+                  <span
+                    className="text-[13px] font-bold font-(family-name:--title-font) whitespace-nowrap transition-all duration-200"
+                    style={{
+                      color: on ? '#fff' : 'var(--secondary)',
+                      opacity: on ? 1 : 0.6,
+                    }}
+                  >
+                    {shortDate(t(`milestones.${item.id}.date`))}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </FadeInOnScreen>
       </div>
