@@ -116,8 +116,8 @@ export default function RoadMap() {
             />
 
             <motion.div
-              className="absolute w-[92px] pointer-events-none"
-              style={{ bottom: '100%', marginBottom: -33, zIndex: 999 }}
+              className="absolute w-[56px] sm:w-[72px] md:w-[92px] mb-[-20px] sm:mb-[-26px] md:mb-[-33px] pointer-events-none"
+              style={{ bottom: '100%', zIndex: 999 }}
               initial={{ left: '-15%' }}
               animate={{
                 left: isCarInView
