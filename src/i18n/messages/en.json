@@ -31,7 +31,7 @@
         "description": "This is where I took my first steps into technology and had my first contact with basic programming. In the very first subjects, like algorithms and programming logic, I discovered my passion for the field and went looking for other courses to deepen my knowledge outside college."
       },
       "fullstackStart": {
-        "date": "October 2021",
+        "date": "September 2021",
         "label": "Started the Full Stack course",
         "description": "After exploring content on my own, I decided to take a bigger step and enrolled in the professional course at Kenzie Academy. This experience was essential to consolidate my foundation and begin a complete journey into Full Stack development."
       },
@@ -51,9 +51,14 @@
         "description": "At uMode I had my first professional opportunity, where I learned a lot and faced my biggest challenges, having the chance to work with several technologies on many solutions in the fashion market."
       },
       "securityEnd": {
-        "date": "May 2024",
+        "date": "June 2024",
         "label": "Completed the Information Security degree",
         "description": "I completed my degree in Information Security, broadening my knowledge in data protection, networks and cybersecurity practices. This foundation, combined with my development experience, made me a well-rounded professional, able to unite performance and security in digital solutions."
+      },
+      "dataCamposStart": {
+        "date": "March 2026",
+        "label": "Started as a Freelance Full Stack Developer at Data Campos",
+        "description": "I started working as a freelancer at Data Campos, building a full stack clinical reporting platform powered by AI for Lifespan Medical in Canada. It was my chance to dive into artificial intelligence solutions and automate processes that used to take hours, reshaping the way I approach new challenges."
       }
     }
   },

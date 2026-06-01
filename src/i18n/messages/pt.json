@@ -31,7 +31,7 @@
         "description": "Foi aqui que dei meus primeiros passos na tecnologia e tive o meu primeiro contato com programação básica. Logo nas primeiras disciplinas, como algoritmos e lógica de programação eu descobri minha paixão pela área e fui buscar outros cursos e aprofundar meu conhecimento fora da faculdade."
       },
       "fullstackStart": {
-        "date": "Outubro de 2021",
+        "date": "Setembro de 2021",
         "label": "Início do curso de FullStack",
         "description": "Após explorar conteúdos por conta própria, decidi dar um passo maior e ingressei no curso profissionalizante da Kenzie Academy. Essa experiência foi essencial para consolidar minha base e iniciar uma jornada completa no desenvolvimento FullStack."
       },
@@ -51,9 +51,14 @@
         "description": "Na uMode tive minha primeira oportunidade profissional, onde eu aprendi muito e onde tive meus maiores desafios, tendo a possibilidade de trabalhar com diversas tecnologias em diversas soluções no mercado da moda."
       },
       "securityEnd": {
-        "date": "Maio de 2024",
+        "date": "Junho de 2024",
         "label": "Conclusão do curso de Segurança da Informação",
         "description": "Concluí a graduação em Segurança da Informação, ampliando meu conhecimento em proteção de dados, redes e práticas de cibersegurança. Essa base, aliada à experiência em desenvolvimento, me tornou um profissional completo, capaz de unir performance e segurança em soluções digitais."
+      },
+      "dataCamposStart": {
+        "date": "Março de 2026",
+        "label": "Início como Desenvolvedor Full Stack Freelancer na Data Campos",
+        "description": "Comecei a atuar como freelancer na Data Campos, desenvolvendo uma plataforma full stack de geração de relatórios clínicos com IA para a Lifespan Medical, no Canadá. Foi a chance de mergulhar em soluções com inteligência artificial e automatizar processos que antes levavam horas, transformando ainda mais a forma como encaro novos desafios."
       }
     }
   },

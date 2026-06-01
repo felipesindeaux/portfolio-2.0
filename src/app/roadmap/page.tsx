@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { TbShieldLockFilled } from 'react-icons/tb';
 import { FaLaptopCode } from 'react-icons/fa';
-import { FaCode } from 'react-icons/fa6';
+import { FaCode, FaRobot } from 'react-icons/fa6';
 import { GiTeacher } from 'react-icons/gi';
 import { FadeInOnScreen } from '@/components/FadeInOnScreen';
 import { useTranslations } from 'next-intl';
@@ -15,6 +15,7 @@ const TIMELINE = [
   { id: 'fullstackEnd', year: '2022', icon: FaCode },
   { id: 'umodeStart', year: '2022', icon: FaLaptopCode },
   { id: 'securityEnd', year: '2024', icon: TbShieldLockFilled },
+  { id: 'dataCamposStart', year: '2026', icon: FaRobot },
 ] as const;
 
 const shortDate = (date: string) => {
